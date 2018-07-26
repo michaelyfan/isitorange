@@ -1,0 +1,98 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.red {
+  background-color: #ff1a1a;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: #000080;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.black {
+  background-color: black;
+}
+
+#root {
+  height: 100%;
+}
+
+#app-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#text-wrapper {
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#big-message {
+  color: rgba(230, 230, 230, 0.7);
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.vote-message {
+  font-size: 24px;
+  color: rgba(230, 230, 230, 0.7);
+}
+
+.disagree {
+  cursor: pointer;
+  color: rgba(230, 230, 230, 0.7);
+}
+
+.disagree:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#button-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.color-button {
+  cursor: pointer;
+  height: 75px;
+  width: 75px;
+  border-radius: 10%;
+  margin: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.color-button:hover {
+  box-shadow: 0 0 12px #51cbee;
+}
+
+/*# sourceMappingURL=index.css.map */
