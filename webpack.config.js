@@ -1,5 +1,6 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var webpack = require('webpack');
 
 var config = {
@@ -20,7 +21,10 @@ var config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    })
+    }),
+    new CopyWebpackPlugin([
+      {from: 'src/assets', to: 'assets'}
+    ])
   ],
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development'
 };

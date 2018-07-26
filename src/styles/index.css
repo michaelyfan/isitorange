@@ -13,11 +13,11 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .orange {
-  background-color: orange;
+  background-color: #FFA500;
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: #f9f414;
 }
 
 .green {
@@ -55,19 +55,19 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 #big-message {
-  color: rgba(230, 230, 230, 0.7);
+  color: rgba(210, 210, 210, 0.7);
   font-weight: bold;
   font-size: 60px;
 }
 
 .vote-message {
   font-size: 24px;
-  color: rgba(230, 230, 230, 0.7);
+  color: rgba(210, 210, 210, 0.7);
 }
 
 .disagree {
   cursor: pointer;
-  color: rgba(230, 230, 230, 0.7);
+  color: rgba(210, 210, 210, 0.7);
 }
 
 .disagree:hover {
