@@ -6,7 +6,8 @@ $green: green;
 $blue: #000080;
 $purple: purple;
 $black: black;
-$fontColor: rgba(210, 210, 210, 0.7);
+$white: rgb(245,245,245);
+$fontColor: rgba(200, 200, 200, 0.8);
 $bigFontSize: 60px;
 $smallFontSize: 24px;
 
@@ -48,6 +49,10 @@ p, h1, h2, h3, h4, h5, h6 {
     background-color: $black;
 }
 
+.white {
+    background-color: $white;
+}
+
 #root {
     height: 100%;
 }
@@ -77,13 +82,13 @@ p, h1, h2, h3, h4, h5, h6 {
     color: $fontColor;
 }
 
-.disagree {
+.text-button {
     cursor: pointer;
-    color: $fontColor;
+    color: darken($fontColor, 10%);
 }
 
-.disagree:hover {
-    color: lighten($fontColor, 20%);
+.text-button:hover {
+    color: lighten($fontColor, 10%);
 }
 
 #button-menu {
@@ -101,8 +106,62 @@ p, h1, h2, h3, h4, h5, h6 {
     border-radius: 10%;
     margin: 10px;
     transition: all 0.30s ease-in-out;
+    border: 2px solid rgba(0,0,0,0);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        color: $fontColor
+    }
+}
+
+.color-button-selected { 
+    border: 1px solid $fontColor;
 }
 
 .color-button:hover {
     box-shadow: 0 0 12px rgba(81, 203, 238, 1);
+}
+
+#colorblind-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        color: $fontColor;
+        margin-right: 10px;
+    }
+}
+
+
+#about-wrapper {
+    text-align: center;
+    color: $fontColor;
+    p {
+        max-width: 80vw;
+        font-size: 28px;
+    }
+}
+
+#bottom-bar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    .icon {
+        color: $fontColor;
+        font-size: 30px;
+        -o-transition: 0.1s;
+        -ms-transition: 0.1s;
+        -moz-transition: 0.1s;
+        -webkit-transition: 0.1s;
+        transition: 0.1s;
+    }
+
+    .icon:hover {
+        color: lighten($fontColor, 10%);
+    }
 }

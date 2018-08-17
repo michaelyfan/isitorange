@@ -36,6 +36,10 @@ p, h1, h2, h3, h4, h5, h6 {
   background-color: black;
 }
 
+.white {
+  background-color: whitesmoke;
+}
+
 #root {
   height: 100%;
 }
@@ -55,23 +59,23 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 #big-message {
-  color: rgba(210, 210, 210, 0.7);
+  color: rgba(200, 200, 200, 0.8);
   font-weight: bold;
   font-size: 60px;
 }
 
 .vote-message {
   font-size: 24px;
-  color: rgba(210, 210, 210, 0.7);
+  color: rgba(200, 200, 200, 0.8);
 }
 
-.disagree {
+.text-button {
   cursor: pointer;
-  color: rgba(210, 210, 210, 0.7);
+  color: rgba(175, 175, 175, 0.8);
 }
 
-.disagree:hover {
-  color: rgba(255, 255, 255, 0.7);
+.text-button:hover {
+  color: rgba(226, 226, 226, 0.8);
 }
 
 #button-menu {
@@ -89,10 +93,58 @@ p, h1, h2, h3, h4, h5, h6 {
   border-radius: 10%;
   margin: 10px;
   transition: all 0.3s ease-in-out;
+  border: 2px solid rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.color-button p {
+  color: rgba(200, 200, 200, 0.8);
+}
+
+.color-button-selected {
+  border: 1px solid rgba(200, 200, 200, 0.8);
 }
 
 .color-button:hover {
   box-shadow: 0 0 12px #51cbee;
+}
+
+#colorblind-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#colorblind-label span {
+  color: rgba(200, 200, 200, 0.8);
+  margin-right: 10px;
+}
+
+#about-wrapper {
+  text-align: center;
+  color: rgba(200, 200, 200, 0.8);
+}
+#about-wrapper p {
+  max-width: 80vw;
+  font-size: 28px;
+}
+
+#bottom-bar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+#bottom-bar .icon {
+  color: rgba(200, 200, 200, 0.8);
+  font-size: 30px;
+  -o-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+#bottom-bar .icon:hover {
+  color: rgba(226, 226, 226, 0.8);
 }
 
 /*# sourceMappingURL=index.css.map */

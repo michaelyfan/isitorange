@@ -58,7 +58,7 @@ class Vote extends React.Component {
     } else if (voted) {
       content = <p className='vote-message'>So far, {votes} {votes === 1 ? 'person thinks' : 'folks think'}  that this color is orange.</p>;
     } else {
-      content = <p className='vote-message disagree' onClick={this.handleVote}>I disagree</p>;
+      content = <span className='vote-message text-button' onClick={this.handleVote}>I disagree</span>;
     }
 
     return (
