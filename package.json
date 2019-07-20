@@ -22,7 +22,6 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
-    "react-switch": "^3.0.4",
     "react-toggle": "^4.0.2"
   },
   "babel": {
