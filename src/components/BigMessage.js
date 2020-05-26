@@ -13,12 +13,17 @@ export default function BigMessage(props) {
 
   return (
     <div>
-      <p id='big-message'>{message}</p>
+      <p
+        id='big-message'
+        style={{color: `${color.contrast}`}}
+      >
+        {message}
+      </p>
     </div>
   )
 }
 
 BigMessage.propTypes = {
-  color: PropTypes.string.isRequired,
+  color: PropTypes.object.isRequired,
   colorWasSelected: PropTypes.bool.isRequired
 }

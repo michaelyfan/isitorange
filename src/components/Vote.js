@@ -22,11 +22,11 @@ class Vote extends React.Component {
       loading: true
     }), () => {
       const { color } = this.props;
-      updateColorRating(color).then((result) => {
+      updateColorRating(color.id).then((result) => {
         let { votes } = result;
         this.setState((prevState) => {
           let votesRecord = prevState.votesRecord;
-          votesRecord[color] = votes;
+          votesRecord[color.id] = votes;
           return {
             loading: false,
             errorHappened: false,
@@ -47,7 +47,7 @@ class Vote extends React.Component {
   render() {
     const { loading, votesRecord, errorHappened } = this.state;
     const { color } = this.props;
-    const votes = votesRecord[color];
+    const votes = votesRecord[color.id];
     const voted = votes != null;
 
     let content = null;
@@ -58,7 +58,7 @@ class Vote extends React.Component {
     } else if (voted) {
       content = <p className='vote-message'>So far, {votes} {votes === 1 ? 'person thinks' : 'folks think'}  that this color is orange.</p>;
     } else {
-      content = <span className='vote-message text-button' onClick={this.handleVote}>I disagree</span>;
+      content = <p className='vote-message text-button' onClick={this.handleVote}>I disagree</p>;
     }
 
     return (
@@ -74,7 +74,7 @@ class Vote extends React.Component {
 }
 
 Vote.propTypes = {
-  color: PropTypes.string.isRequired
+  color: PropTypes.object.isRequired
 }
 
 export default Vote;

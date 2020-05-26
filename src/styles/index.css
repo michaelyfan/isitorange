@@ -8,38 +8,6 @@ p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-.red {
-  background-color: #ff1a1a;
-}
-
-.orange {
-  background-color: #FFA500;
-}
-
-.yellow {
-  background-color: #f9f414;
-}
-
-.green {
-  background-color: green;
-}
-
-.blue {
-  background-color: #000080;
-}
-
-.purple {
-  background-color: purple;
-}
-
-.black {
-  background-color: black;
-}
-
-.white {
-  background-color: whitesmoke;
-}
-
 #root {
   height: 100%;
 }

@@ -48,10 +48,16 @@ class App extends React.Component {
     const { color, colorWasSelected, colorblind } = this.state;
     return (
       <div id='app-wrapper'>
+
         <div>
           <Helmet>
-            <body className={color} />
+            <style type="text/css">{`
+              body {
+                background-color: ${color.hex};
+              }
+            `}</style>
           </Helmet>
+
           <div id='text-wrapper'>
             <div>
               <BigMessage color={color} colorWasSelected={colorWasSelected} />
@@ -61,19 +67,19 @@ class App extends React.Component {
             </div>
           </div>
         </div>
+
         <ColorMenu colorblind={colorblind} color={color} changeColor={this.handleChangeColor} />
+
         <div id='bottom-bar'>
           <label id='colorblind-label'>
-            {colorWasSelected
-              ? <span>Colorblind?</span>
-              : <span style={{color: 'black'}}>Colorblind?</span>}
+            <span style={{color: `${color.contrast}`}}>Colorblind?</span>
             <Toggle
               defaultChecked={colorblind}
               onChange={this.handleChangeColorblind} />
           </label>
-          <a href='https://www.facebook.com/isitorange' target='_blank'><FontAwesomeIcon className='icon' icon={faFacebook} /></a>
+          <a href='https://www.facebook.com/isitorange' target='_blank'><FontAwesomeIcon className='icon' icon={faFacebook} style={{color: `${color.contrast}`}} /></a>
         </div>
-        
+
       </div>
     )
   }
