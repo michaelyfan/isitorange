@@ -7,7 +7,7 @@ export const colors = {
   ORANGE: {
     id: 'orange',
     hex: '#FFA500',
-    contrast: '#ffffff'
+    contrast: '#000000'
   },
   YELLOW: {
     id: 'yellow',
@@ -32,8 +32,8 @@ export const colors = {
   WHITE: {
     id: 'white',
     hex: '#f5f5f5',
-    // contrast: '#000000'
-    contrast: '#c8c8c8'
+    contrast: '#000000',
+    accent: '#c8c8c8'
   },
   BLACK: {
     id: 'black',

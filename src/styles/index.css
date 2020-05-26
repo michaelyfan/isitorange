@@ -54,13 +54,17 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-right: 10px;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .color-button {
   cursor: pointer;
   height: 75px;
   width: 75px;
   border-radius: 10%;
   margin: 10px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
   border: 2px solid rgba(0, 0, 0, 0);
   display: flex;
   justify-content: center;
@@ -71,7 +75,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .color-button-selected {
-  border: 1px solid rgba(200, 200, 200, 0.8);
+  border: 1px solid;
 }
 
 .color-button:hover {
@@ -105,14 +109,6 @@ p, h1, h2, h3, h4, h5, h6 {
 #bottom-bar .icon {
   color: rgba(200, 200, 200, 0.8);
   font-size: 30px;
-  -o-transition: 0.1s;
-  -ms-transition: 0.1s;
-  -moz-transition: 0.1s;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
-}
-#bottom-bar .icon:hover {
-  color: rgba(226, 226, 226, 0.8);
 }
 
 /*# sourceMappingURL=index.css.map */

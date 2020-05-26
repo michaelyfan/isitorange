@@ -60,9 +60,9 @@ class App extends React.Component {
 
           <div id='text-wrapper'>
             <div>
-              <BigMessage color={color} colorWasSelected={colorWasSelected} />
+              <BigMessage color={color} colorblind={colorblind} colorWasSelected={colorWasSelected} />
               { colorWasSelected 
-                ? <Vote color={color} /> 
+                ? <Vote color={color} colorblind={colorblind} /> 
                 : <p className='vote-message' style={{visibility: 'hidden'}}>Filler!</p> }
             </div>
           </div>
@@ -72,12 +72,12 @@ class App extends React.Component {
 
         <div id='bottom-bar'>
           <label id='colorblind-label'>
-            <span style={{color: `${color.contrast}`}}>Colorblind?</span>
+            <span className='bold' style={{color: `${color.contrast}`}}>More contrast?</span>
             <Toggle
               defaultChecked={colorblind}
               onChange={this.handleChangeColorblind} />
           </label>
-          <a href='https://www.facebook.com/isitorange' target='_blank'><FontAwesomeIcon className='icon' icon={faFacebook} style={{color: `${color.contrast}`}} /></a>
+          <a href='https://www.facebook.com/isitorange' target='_blank'><FontAwesomeIcon className='icon' icon={faFacebook} style={{color: `${colorblind ? color.contrast : color.accent || color.contrast}`}} /></a>
         </div>
 
       </div>

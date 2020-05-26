@@ -5,16 +5,20 @@ import PropTypes from 'prop-types';
 function ColorButton(props) {
   const { handleClick, color, selectedColor, colorblind } = props;
   
-  let className;
-  if (color.id === selectedColor.id) {
-    className = `color-button color-button-selected`;
-  } else {
-    className = `color-button`;
-  }
+  const className = color.id === selectedColor.id
+    ? 'color-button color-button-selected'
+    : 'color-button';
+
+  let style = {
+    backgroundColor: `${color.hex}`,
+    borderColor: color.id === selectedColor.id
+      ? `${color.contrast}`
+      : undefined
+  };
   
   return (
-    <div onClick={props.handleClick} className={className} style={{backgroundColor: `${color.hex}`}}>
-      {colorblind && <p style={{color: `${color.contrast}`}}>{color.id}</p>}
+    <div onClick={props.handleClick} className={className} style={style}>
+      {colorblind && <p className='bold' style={{color: `${color.contrast}`}}>{color.id}</p>}
     </div>
   )
 }

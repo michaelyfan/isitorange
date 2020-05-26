@@ -46,27 +46,45 @@ class Vote extends React.Component {
 
   render() {
     const { loading, votesRecord, errorHappened } = this.state;
-    const { color } = this.props;
+    const { color, colorblind } = this.props;
     const votes = votesRecord[color.id];
     const voted = votes != null;
 
-    let content = null;
-    if (errorHappened) {
-      content = <p className='vote-message'>There was an error ;( try refreshing the app</p>;
+    const attributes = {
+      className: 'vote-message',
+      style: {
+        color: color.contrast
+      }
+    };
+    let content = '';
+    if (color === colors.ORANGE) {
+      attributes.style = { visibility: 'hidden' };
+      content = 'Filler!';
+      // content = <p className='vote-message' style={{visibility: 'hidden'}}>Filler!</p>;
+    } else if (errorHappened) {
+      content = 'There was an error ;( try refreshing the app';
     } else if (loading) {
-      content = <p className='vote-message'>Loading...</p>;
+      content = 'Loading...';
     } else if (voted) {
-      content = <p className='vote-message'>So far, {votes} {votes === 1 ? 'person thinks' : 'folks think'}  that this color is orange.</p>;
+      content = `So far, ${votes} ${votes === 1 ? 'person thinks' : 'folks think'}  that this color is orange.`;
     } else {
-      content = <p className='vote-message text-button' onClick={this.handleVote}>I disagree</p>;
+      attributes.className += ' text-button';
+      attributes.onClick = this.handleVote;
+      attributes.style.color = undefined;
+      content = 'I disagree';
+    }
+    if (colorblind) {
+      attributes.className += ' bold';
+
+      // override no contrast on text button
+      attributes.style.color = color.contrast;
     }
 
     return (
       <div className='vote'>
-        { color === colors.ORANGE
-          ? <div><p className='vote-message' style={{visibility: 'hidden'}}>Filler!</p></div>
-          : <div>{content}</div>
-        }
+        <div>
+         <p {...attributes}>{content}</p>
+        </div>
       </div>
     )
   }
@@ -74,7 +92,8 @@ class Vote extends React.Component {
 }
 
 Vote.propTypes = {
-  color: PropTypes.object.isRequired
+  color: PropTypes.object.isRequired,
+  colorblind: PropTypes.bool.isRequired
 }
 
 export default Vote;
