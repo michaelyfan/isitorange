@@ -22,9 +22,11 @@ var config = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
-    new CopyWebpackPlugin([
-      {from: 'src/assets', to: 'assets'}
-    ])
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/assets', to: 'assets' }
+      ]
+    })
   ],
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development'
 };
