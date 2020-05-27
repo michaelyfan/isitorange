@@ -1,5 +1,6 @@
 import { colors } from './enums';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 // come at me, malicious users, with this deceivingly public api key
 const config = {
@@ -9,10 +10,6 @@ const config = {
 };
 firebase.initializeApp(config);
 const db = firebase.firestore();
-
-// To prevent a console error
-const settings = {timestampsInSnapshots: true};
-db.settings(settings);
 
 export function updateColorRating(colorId) {
   const docRef = db.collection('colors').doc(colorId);

@@ -14,7 +14,7 @@ https://isitorange.surge.sh/
 *install [surge](https://surge.sh/) and change the URL in `package.json` to one you have access to
 
 ### Note about Sass
-The project currently doesn't handle `url(...)` in the Sass folders due to a lack of need; keep in mind there are [some problems](https://github.com/webpack-contrib/sass-loader#problems-with-url) if `url` must be used
+The project currently doesn't handle `url(...)` in the Sass folders due to a lack of need; keep in mind there are [some problems](https://github.com/webpack-contrib/sass-loader#problems-with-url) if `url(...)` must be used
 
 ### TODOS:
-- continuous deployment
+- fedorange
