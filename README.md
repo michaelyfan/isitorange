@@ -11,10 +11,7 @@ https://isitorange.surge.sh/
 * to deploy built files: `npm run deploy`*
 * to check for dependency vulnerabilities: `npm run security`
 
-*install [surge](https://surge.sh/) and change the URL in `package.json` to one you have access to
+*install [surge](https://surge.sh/) and change the URL in `package.json`'s `deploy` script to one you have access to
 
 ### Note about Sass
-The project currently doesn't handle `url(...)` in the Sass folders due to a lack of need; keep in mind there are [some problems](https://github.com/webpack-contrib/sass-loader#problems-with-url) if `url(...)` must be used
-
-### TODOS:
-- fedorange
+The project currently doesn't handle `url(...)` in the Sass folders since it's not needed; keep in mind there are [some problems](https://github.com/webpack-contrib/sass-loader#problems-with-url) if `url(...)` must be used
