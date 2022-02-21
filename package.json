@@ -8,7 +8,7 @@
     "create": "webpack",
     "deploy": "surge dist --domain https://isitorange.surge.sh",
     "dev": "webpack-dev-server --open",
-    "security": "npm audit --registry=https://registry.npmjs.org",
+    "security": "npm audit --registry=https://registry.npmjs.org --production",
     "serve": "node test-server.js"
   },
   "author": "Michael Fan",
@@ -19,7 +19,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "0.1.0-11",
-    "firebase": "^8.6.5",
+    "firebase": "^8.10.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-helmet": "^5.2.1",
