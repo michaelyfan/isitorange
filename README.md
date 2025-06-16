@@ -1,5 +1,7 @@
 # Is It Orange
 
+Cute little website I made with some friends, don't even remember what inspired this
+
 :tangerine::tangerine::tangerine:
 
 https://isitorange.surge.sh/
